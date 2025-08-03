@@ -44,35 +44,7 @@ export default function MenuPage() {
     }
   ];
 
-  const foodMenu = [
-    {
-      category: "Hamur İşleri",
-      items: [
-        { name: "Kruvasan", price: "₺35", description: "Tereyağlı Fransız kruvasanı" },
-        { name: "Çikolatalı Kruvasan", price: "₺40", description: "Çikolata dolgulu kruvasan" },
-        { name: "Yaban Mersinli Muffin", price: "₺37", description: "Gerçek yaban mersini ile taze pişmiş" },
-        { name: "Tarçınlı Çörek", price: "₺42", description: "Sıcak tarçınlı çörek ve krema" }
-      ]
-    },
-    {
-      category: "Sandviçler",
-      items: [
-        { name: "Avokado Tost", price: "₺85", description: "Ekşi maya ekmek, avokado, deniz tuzu ve kırmızı biber" },
-        { name: "Jambon Peynirli Kruvasan", price: "₺75", description: "Klasik jambon ve İsviçre peyniri" },
-        { name: "Hindi & Brie", price: "₺80", description: "Hindi dilimi, brie peyniri ve kızılcık" },
-        { name: "Sebzeli Wrap", price: "₺77", description: "Humus ile taze sebzeler" }
-      ]
-    },
-    {
-      category: "Atıştırmalıklar",
-      items: [
-        { name: "Karışık Kuruyemiş", price: "₺45", description: "Premium karışık kuruyemiş" },
-        { name: "Granola Bar", price: "₺30", description: "Ev yapımı granola bar" },
-        { name: "Taze Meyve Kasesi", price: "₺40", description: "Mevsimsel taze meyveler" },
-        { name: "Yoğurt Parfe", price: "₺55", description: "Granola ve meyveler ile Yunan yoğurdu" }
-      ]
-    }
-  ];
+  
 
   return (
     <div className="min-h-screen bg-background">
@@ -140,34 +112,7 @@ export default function MenuPage() {
         </div>
       </section>
 
-      {/* Food Menu */}
-      <section className="py-16 bg-muted">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-foreground mb-12 text-center">Yemek & Hamur İşleri</h2>
-          <div className="grid lg:grid-cols-3 gap-8">
-            {foodMenu.map((category, categoryIndex) => (
-              <div key={categoryIndex} className="space-y-6">
-                <h3 className="text-2xl font-semibold text-primary border-b border-primary/20 pb-2">
-                  {category.category}
-                </h3>
-                <div className="space-y-4">
-                  {category.items.map((item, itemIndex) => (
-                    <div key={itemIndex} className="flex justify-between items-start p-4 bg-background rounded-lg hover:shadow-md transition-shadow">
-                      <div className="flex-1">
-                        <div className="flex justify-between items-start mb-1">
-                          <h4 className="font-semibold text-foreground">{item.name}</h4>
-                          <span className="text-primary font-semibold ml-4">{item.price}</span>
-                        </div>
-                        <p className="text-muted-foreground text-sm">{item.description}</p>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+    
 
       {/* Special Offers */}
       <section className="py-16">
