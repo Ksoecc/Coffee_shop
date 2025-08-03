@@ -1,4 +1,6 @@
 import Link from "next/link";
+import { ThemeToggle } from "@/components/theme-toggle";
+import { CartIndicator } from "@/components/cart-indicator";
 
 export default function MenuPage() {
   const coffeeMenu = [
@@ -87,9 +89,13 @@ export default function MenuPage() {
               <Link href="/about" className="text-foreground hover:text-primary transition-colors">Hakkımızda</Link>
               <Link href="/contact" className="text-foreground hover:text-primary transition-colors">İletişim</Link>
             </div>
-            <button className="bg-primary text-white px-6 py-2 rounded-full hover:bg-primary-light transition-colors">
-              Sipariş Ver
-            </button>
+            <div className="flex items-center space-x-4">
+              <ThemeToggle />
+              <CartIndicator />
+              <Link href="/order" className="bg-primary text-white px-6 py-2 rounded-full hover:bg-primary-light transition-colors">
+                Sipariş Ver
+              </Link>
+            </div>
           </div>
         </div>
       </nav>
